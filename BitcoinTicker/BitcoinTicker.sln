@@ -3,7 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33213.308
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BitcoinTicker", "BitcoinTicker\BitcoinTicker.csproj", "{F11C630A-0C5E-42CC-93E1-EE9534A2FCAC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BitcoinTicker.Application", "BitcoinTicker.Application\BitcoinTicker.Application.csproj", "{55E822D4-CF53-4A9B-8EF3-F61EB0A4C926}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BitcoinTicker.Application.Shared", "BitcoinTicker.Application.Shared\BitcoinTicker.Application.Shared.csproj", "{3564578A-DACE-4A4E-B5D9-B640139E3365}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BitcoinTicker.Api", "BitcoinTicker.Api\BitcoinTicker.Api.csproj", "{F3F6E6EA-329B-4198-B825-9DE72F4B684D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BitcoinTicker.Shared", "BitcoinTicker.Shared\BitcoinTicker.Shared.csproj", "{075F1899-9FD0-4BDD-AD9E-C38D2F075F79}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +17,22 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{F11C630A-0C5E-42CC-93E1-EE9534A2FCAC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F11C630A-0C5E-42CC-93E1-EE9534A2FCAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F11C630A-0C5E-42CC-93E1-EE9534A2FCAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F11C630A-0C5E-42CC-93E1-EE9534A2FCAC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{55E822D4-CF53-4A9B-8EF3-F61EB0A4C926}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55E822D4-CF53-4A9B-8EF3-F61EB0A4C926}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55E822D4-CF53-4A9B-8EF3-F61EB0A4C926}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55E822D4-CF53-4A9B-8EF3-F61EB0A4C926}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3564578A-DACE-4A4E-B5D9-B640139E3365}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3564578A-DACE-4A4E-B5D9-B640139E3365}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3564578A-DACE-4A4E-B5D9-B640139E3365}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3564578A-DACE-4A4E-B5D9-B640139E3365}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F3F6E6EA-329B-4198-B825-9DE72F4B684D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F3F6E6EA-329B-4198-B825-9DE72F4B684D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F3F6E6EA-329B-4198-B825-9DE72F4B684D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F3F6E6EA-329B-4198-B825-9DE72F4B684D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{075F1899-9FD0-4BDD-AD9E-C38D2F075F79}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{075F1899-9FD0-4BDD-AD9E-C38D2F075F79}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{075F1899-9FD0-4BDD-AD9E-C38D2F075F79}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{075F1899-9FD0-4BDD-AD9E-C38D2F075F79}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
