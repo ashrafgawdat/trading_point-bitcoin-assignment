@@ -6,5 +6,6 @@ namespace BitcoinTicker.Application.Shared.BitcoinTicks
     {
         Task<BitcoinPriceSourcesOutput> GetBitcoinPriceSources();
         Task<BitcoinPriceOutput> GetCurrentBitcoinPrice(GetCurrentBitcoinPriceRequestInput input);
+        Task<BitcoinPriceHistoryOutput> GetBitcoinPriceHistory();
     }
 }

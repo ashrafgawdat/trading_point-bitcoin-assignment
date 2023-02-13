@@ -6,9 +6,4 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\BitcoinTicker.Core\BitcoinTicker.Core.csproj" />
-    <ProjectReference Include="..\BitcoinTicker.Shared\BitcoinTicker.Shared.csproj" />
-  </ItemGroup>
-
 </Project>

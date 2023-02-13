@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using BitcoinTicker.Application.Shared.BitcoinTicks.Dto;
+using BitcoinTicker.Core;
 
 namespace BitcoinTicker.Api.MappingProfiles
 {
@@ -8,6 +9,7 @@ namespace BitcoinTicker.Api.MappingProfiles
         public BitcoinPriceOutputMappingProfile()
         {
             CreateMap<BitcoinPriceProviderOutput, BitcoinPriceOutput>();
+            CreateMap<BitcoinPriceOutput, BitcoinPrice>().ReverseMap();
         }
     }
 }

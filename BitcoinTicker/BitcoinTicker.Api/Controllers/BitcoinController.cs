@@ -29,5 +29,11 @@ namespace BitcoinTicker.Api.Controllers
         {
             return await _bitcoinPriceService.GetCurrentBitcoinPrice(new GetCurrentBitcoinPriceRequestInput { Source = source, CurrencyPair = currencyPair });
         }
+
+        [HttpGet]
+        public async Task<BitcoinPriceHistoryOutput> History()
+        {
+            return await _bitcoinPriceService.GetBitcoinPriceHistory();
+        }
     }
 }

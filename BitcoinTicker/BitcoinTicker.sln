@@ -11,7 +11,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BitcoinTicker.Api", "Bitcoi
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BitcoinTicker.Shared", "BitcoinTicker.Shared\BitcoinTicker.Shared.csproj", "{075F1899-9FD0-4BDD-AD9E-C38D2F075F79}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BitcoinTicker.EntityFrameworkCore", "BitcoinTicker.EntityFrameworkCore\BitcoinTicker.EntityFrameworkCore.csproj", "{0AE8B51C-51AF-4B5E-AF95-9396DAC2E22A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BitcoinTicker.EntityFrameworkCore", "BitcoinTicker.EntityFrameworkCore\BitcoinTicker.EntityFrameworkCore.csproj", "{0AE8B51C-51AF-4B5E-AF95-9396DAC2E22A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BitcoinTicker.Core", "BitcoinTicker.Core\BitcoinTicker.Core.csproj", "{ED610E35-EEF1-4DE8-B44F-766EE0038C87}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{0AE8B51C-51AF-4B5E-AF95-9396DAC2E22A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0AE8B51C-51AF-4B5E-AF95-9396DAC2E22A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0AE8B51C-51AF-4B5E-AF95-9396DAC2E22A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ED610E35-EEF1-4DE8-B44F-766EE0038C87}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED610E35-EEF1-4DE8-B44F-766EE0038C87}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED610E35-EEF1-4DE8-B44F-766EE0038C87}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED610E35-EEF1-4DE8-B44F-766EE0038C87}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

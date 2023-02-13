@@ -1,8 +1,10 @@
 using AutoMapper;
 using BitcoinTicker.Application.BitcoinTicks;
+using BitcoinTicker.Application.Shared;
 using BitcoinTicker.Application.Shared.BitcoinTicks;
 using BitcoinTicker.Application.Shared.BitcoinTicks.Dto;
 using BitcoinTicker.EntityFrameworkCore.Context;
+using BitcoinTicker.EntityFrameworkCore.Repositories;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -15,7 +17,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 
-builder.Services.AddDbContext<AppDbContext>(options =>
+builder.Services.AddDbContext<BitcoinPriceDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("Default")));
 
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
@@ -24,7 +26,8 @@ builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 builder.Services.AddScoped<IBitcoinPriceFactory, BitcoinPriceFactory>()
                 .AddScoped<IBitcoinPriceBitstampProvider, BitstampBitcoinPriceProvider>()
                 .AddScoped<IBitcoinPriceBitfinexProvider, BitfinexBitcoinPriceProvider>()
-                .AddScoped<IBitcoinPriceService, BitcoinPriceService>();
+                .AddScoped<IBitcoinPriceService, BitcoinPriceService>()
+                .AddScoped<IBitcoinPriceRepository, BitcoinPriceRepository>();
 
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
@@ -39,5 +42,11 @@ app.UseHttpsRedirection();
 app.UseAuthorization();
 
 app.MapControllers();
+
+using (var scope = app.Services.CreateScope())
+{
+    var dataContext = scope.ServiceProvider.GetRequiredService<BitcoinPriceDbContext>();
+    dataContext.Database.Migrate();
+}
 
 app.Run();
