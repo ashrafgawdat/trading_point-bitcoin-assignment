@@ -26,7 +26,7 @@ namespace BitcoinTicker.Application.BitcoinTicks
             return Task.FromResult(output);
         }
 
-        public async Task<BitcoinPriceOutput> GetCurrentBitcoinPrice(GetCurrentBitcoinPriceRequestInput input)
+        public async Task<BitcoinPriceDto> GetCurrentBitcoinPrice(GetCurrentBitcoinPriceRequestInput input)
         {
             if (Enum.TryParse<BitcoinPriceSourceEnum>(input.Source, true, out var sourceEnum))
             {
@@ -38,7 +38,7 @@ namespace BitcoinTicker.Application.BitcoinTicks
             var priceEntity = _mapper.Map<BitcoinPrice>(result);
             await _bitcoinPriceRepository.InsertAsync(priceEntity);
             await _bitcoinPriceRepository.SaveChangesAsync();
-            return result;
+            return _mapper.Map<BitcoinPriceDto>(priceEntity);
         }
 
         public async Task<BitcoinPriceHistoryOutput> GetBitcoinPriceHistory()
@@ -46,7 +46,7 @@ namespace BitcoinTicker.Application.BitcoinTicks
             var result = new BitcoinPriceHistoryOutput();
 
             var lstEntities = await _bitcoinPriceRepository.GetAllListAsync();
-            result.Prices = _mapper.Map<List<BitcoinPriceOutput>>(lstEntities);
+            result.Prices = _mapper.Map<List<BitcoinPriceDto>>(lstEntities);
 
             return result;
         }

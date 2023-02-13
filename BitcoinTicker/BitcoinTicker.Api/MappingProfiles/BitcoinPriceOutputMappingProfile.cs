@@ -10,6 +10,8 @@ namespace BitcoinTicker.Api.MappingProfiles
         {
             CreateMap<BitcoinPriceProviderOutput, BitcoinPriceOutput>();
             CreateMap<BitcoinPriceOutput, BitcoinPrice>().ReverseMap();
+            CreateMap<BitcoinPrice, BitcoinPriceDto>()
+                .ForMember(dst => dst.Price, opt => opt.MapFrom(src => src.Price.ToString("0.00")));
         }
     }
 }

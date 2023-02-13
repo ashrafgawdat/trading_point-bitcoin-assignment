@@ -25,7 +25,7 @@ namespace BitcoinTicker.Api.Controllers
         }
 
         [HttpGet]
-        public async Task<BitcoinPriceOutput> Price(string source, string currencyPair = "btcusd")
+        public async Task<BitcoinPriceDto> Price(string source, string currencyPair = "btcusd")
         {
             return await _bitcoinPriceService.GetCurrentBitcoinPrice(new GetCurrentBitcoinPriceRequestInput { Source = source, CurrencyPair = currencyPair });
         }

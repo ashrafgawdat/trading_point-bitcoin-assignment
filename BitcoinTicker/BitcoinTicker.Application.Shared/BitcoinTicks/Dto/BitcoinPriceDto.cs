@@ -8,8 +8,11 @@ using System.Threading.Tasks;
 
 namespace BitcoinTicker.Application.Shared.BitcoinTicks.Dto
 {
-    public class BitcoinPriceHistoryOutput
+    public class BitcoinPriceDto
     {
-        public List<BitcoinPriceDto> Prices { get; set; } = new List<BitcoinPriceDto>();
+        public string? CurrencyPair { get; set; }
+        public string? Price { get; set; }
+        public virtual DateTime Timestamp { get; set; }
+        public string? Source { get; set; }
     }
 }
