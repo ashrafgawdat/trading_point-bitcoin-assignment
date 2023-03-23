@@ -9,9 +9,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v1
-      - name: Install dotnet SDK
-
+    
       - uses: actions/checkout@v2
       - name: Build  images
         run: docker build -t vlensprod.azurecr.io/bitcointicker.api -f ./BitcoinTicker/BitcoinTicker.Api/Dockerfile .
