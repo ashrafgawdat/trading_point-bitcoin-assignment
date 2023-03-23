@@ -1,0 +1,26 @@
+name: CI
+on:
+  push:
+    branches:
+        - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v1
+      - name: Install dotnet SDK
+
+      - uses: actions/checkout@v2
+      - name: Build  images
+        run: |
+          docker build -t vlensprod.azurecr.io/bitcointicker.api -f ./BitcoinTicker/BitcoinTicker.Api/Dockerfile .
+          
+          
+      - name: Login to docker
+        run: docker login --username=vlensprod --password=UJ8v4UTf49zm2BYCY982N4wBeYOu4hfxJsrLwrg3Vx+ACRB1XUpp vlensprod.azurecr.io
+      - name: Publish Images
+        run: |
+          docker push vlensprod.azurecr.io/bitcointicker.api
+        
